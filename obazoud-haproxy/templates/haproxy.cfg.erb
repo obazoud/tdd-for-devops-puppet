@@ -19,9 +19,14 @@ defaults
   option redispatch
   balance  roundrobin
 
-<% if admin == true %>
+<% if @admin == true %>
 listen admin
   bind 127.0.0.1:22002
   mode http
   stats uri /
 <% end %>
+
+frontend http
+  bind *:80
+  option httplog
+

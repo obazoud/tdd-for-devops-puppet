@@ -3,8 +3,8 @@ HOSTS:
     roles:
       - default
     platform: el-6-x86_64
-    box : centos-65-x64-vbox4210-nocm
-    box_url : http://puppet-vagrant-boxes.puppetlabs.com/centos-65-x64-vbox4210-nocm.box
+    box : opscode-centos-6.5
     hypervisor : vagrant
+    ip: 33.33.33.10
 CONFIG:
   type: foss
