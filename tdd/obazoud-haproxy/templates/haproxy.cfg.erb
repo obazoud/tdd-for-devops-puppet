@@ -1,0 +1,27 @@
+global
+  log 127.0.0.1   local0
+  log 127.0.0.1   local1 notice
+  #log loghost    local0 info
+  maxconn 4096
+  #debug
+  #quiet
+  user haproxy
+  group haproxy
+
+defaults
+  log     global
+  mode    http
+  retries 3
+  timeout client 50s
+  timeout connect 5s
+  timeout server 50s
+  option dontlognull
+  option redispatch
+  balance  roundrobin
+
+<% if admin == true %>
+listen admin
+  bind 127.0.0.1:22002
+  mode http
+  stats uri /
+<% end %>

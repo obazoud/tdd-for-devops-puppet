@@ -1,0 +1,13 @@
+source 'https://rubygems.org'
+
+gem 'puppet', '~> 3.7.1'
+gem 'facter', '~> 2.2.0'
+
+gem 'rspec', '< 3.0.0'
+
+gem 'puppetlabs_spec_helper', '~> 0.8.1'
+gem 'puppet-lint', '~> 1.0.1'
+
+gem 'beaker', '~> 1.17.7'
+gem 'beaker-rspec', '~> 2.0.0'
+gem 'serverspec', '~> 0.15.4'
